@@ -137,7 +137,7 @@ def get_db(alias=DEFAULT_CONNECTION_NAME, reconnect=False):
         # Authenticate if necessary
         print("ASEDFAWEF")
         if conn_settings['username'] and conn_settings['password']:
-            auth_kwargs = {"source": conn_settings["authentication_source"]}
+            auth_kwargs = {"source": 'admin'}
             db.authenticate(conn_settings['username'],
                             conn_settings['password'], **auth_kwargs)
         _dbs[alias] = db
